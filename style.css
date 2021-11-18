@@ -96,7 +96,8 @@ main {
   font-weight: 400;
 }
 
-.stats h3 {
+.stats p {
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--white);
 }
@@ -145,6 +146,11 @@ main {
 
   .stat {
     margin-bottom: 2rem;
+  }
+
+  .stat p {
+    color: var(--main-para);
+    font-size: 2rem;
   }
 
   .img {
