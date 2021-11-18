@@ -1,0 +1,173 @@
+/*
+    Before you check out this code of mine, I will let you know that the code is 
+    not formatted or as effiecient well cause i suck at it :))))
+*/
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --soft-violent: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --main-para: hsla(0, 0%, 100%, 0.75);
+  --stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+/*-------------- Reset --------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--main-background);
+}
+
+/*-------------- Layout --------------*/
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card {
+  width: 60%;
+  display: flex;
+  overflow: auto;
+  border-radius: 10px;
+  background-color: var(--card-background);
+}
+
+#card > * {
+  width: 50%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.img {
+  height: auto;
+  background: url("images/image-header-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--soft-violent);
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3.2rem 4rem 3.5rem;
+}
+
+.card-desc .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.card-desc .desc {
+  width: 80%;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-bottom: 5rem;
+  align-self: flex-start;
+  color: var(--stat-heading);
+}
+
+.stats {
+  width: 90%;
+  padding: 0 2rem 0 0;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.stats h3 {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.stats span {
+  font-weight: 400;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--stat-heading);
+}
+
+/*-------------- Media Queries --------------*/
+
+@media only screen and (max-width: 700px) {
+  #card {
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+
+  #card > * {
+    width: 100%;
+  }
+
+  .card-desc {
+    padding: 2rem;
+  }
+
+  .card-desc > * {
+    text-align: center;
+  }
+
+  .card-desc .title {
+    width: 90%;
+  }
+
+  .card-desc .desc {
+    width: 65%;
+    align-self: center;
+  }
+
+  .stats {
+    padding: 0;
+    align-self: center;
+    flex-direction: column;
+  }
+
+  .stat {
+    margin-bottom: 2rem;
+  }
+
+  .img {
+    background: url("images/image-header-mobile.jpg") no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: var(--soft-violent);
+    max-width: 100%;
+    min-height: 240px;
+  }
+}
+
+/*-------------- Attribution --------------*/
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
